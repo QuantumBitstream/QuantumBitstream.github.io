@@ -71,8 +71,8 @@
   
     <article id="post-wiki/front end/vue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/rhythm_doc/2024/08/05/wiki/front%20end/vue/" class="article-date">
-  <time class="dt-published" datetime="2024-08-05T15:34:32.492Z" itemprop="datePublished">2024-08-05</time>
+    <a href="/rhythm_doc/2024/08/13/wiki/front%20end/vue/" class="article-date">
+  <time class="dt-published" datetime="2024-08-13T06:26:13.722Z" itemprop="datePublished">2024-08-13</time>
 </a>
     
   <div class="article-category">
@@ -87,7 +87,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/rhythm_doc/2024/08/05/wiki/front%20end/vue/">vue</a>
+      <a class="p-name article-title" href="/rhythm_doc/2024/08/13/wiki/front%20end/vue/">vue</a>
     </h1>
   
 
@@ -115,19 +115,170 @@
 
 <p>html + css + javascript(数据交互)</p>
 <p>vue&#x2F;react - 用于构建用户界面的javascript库 - 封装html + css + javascript</p>
-<p>s1: 发送请求获取数据</p>
-<p>s2: 处理数据(过滤、整理格式等)</p>
-<p>s3: 操作dom呈现页面 - vue&#x2F;react - 是一个将数据渲染为html视图的开源javascript库且只关注视图</p>
-<p>javascript直接操作dom - 浏览器不断重绘重排</p>
+<br/>
+s1: 发送请求获取数据
+<br/>
+s2: 处理数据(过滤、整理格式等)
+<br/>
+s3: 操作dom呈现页面 - vue/react - 是一个将数据渲染为html视图的开源javascript库且只关注视图
+
+
+<br/>
+javascript直接操作dom - 浏览器不断重绘重排
+
+
+<br/>
+html
+
+<p>css</p>
+<p>javascript</p>
+<p>jquery  -  javaweb</p>
+<p>bootstrap</p>
+<p>vueframe  -  spring</p>
+<p>vuecli  -  springboot</p>
+<br/>
+
+<p>jquery、bootstrap - dhtml</p>
+<p>vue - 前后端分离</p>
+<br/>
+html - div form(前端的前台)
+
+<p>html - div table(前端的后台)</p>
+<p>css - css selector、box、弹性布局</p>
+<p>javascript - event、capture、bubble</p>
+<br/>
+
+<p><img src="/rhythm_doc/assets/image-20240425005720372.png" alt="image-20240425005720372"></p>
+<h3 id="vue-config-js-vite-config-js-简要介绍"><a href="#vue-config-js-vite-config-js-简要介绍" class="headerlink" title="vue.config.js vite.config.js              简要介绍"></a>vue.config.js vite.config.js              简要介绍</h3><p><code>vue.config.js</code> 和 <code>vite.config.js</code> 都是用于配置 Vue 项目的文件，但它们针对不同的构建工具和环境。</p>
+<ol>
+<li><p><code>vue.config.js</code>：这是一个用于配置 Vue CLI 项目的文件。通过修改这个文件，可以对项目的构建过程进行定制化配置，包括Webpack的配置、DevServer的配置、插件的配置等。可以用它来修改默认的Webpack配置、添加自定义的loader、plugin等。</p>
+</li>
+<li><p><code>vite.config.js</code>：这是一个用于配置 Vite 项目的文件。Vite是一个新型的前端构建工具，相较于Vue CLI更快速、更轻量。<code>vite.config.js</code>文件用于配置Vite项目的构建过程，可以配置插件、自定义构建规则、代理等。它采用ES Module的方式加载配置，支持热更新，开发体验更加流畅。</p>
+</li>
+</ol>
+<p>总的来说，<code>vue.config.js</code>用于Vue CLI项目的配置，而<code>vite.config.js</code>用于Vite项目的配置，两者都可以帮助开发者根据项目需求进行定制化配置。</p>
+<h3 id="ES-modules"><a href="#ES-modules" class="headerlink" title="ES modules"></a>ES modules</h3><p>ES模块是指ECMAScript模块，是一种用于在JavaScript中组织和导入导出代码的标准化模块系统。ES模块允许开发者将代码分割成多个文件，并通过导入和导出语法在不同文件之间共享变量、函数和类等代码。ES模块已经成为现代JavaScript开发中的主流模块化方案，取代了之前的CommonJS和AMD模块系统。</p>
+<h3 id="Installing-Plugins-in-an-Existing-Project-1"><a href="#Installing-Plugins-in-an-Existing-Project-1" class="headerlink" title="Installing Plugins in an Existing Project$^{[1]}$"></a>Installing Plugins in an Existing Project$^{[1]}$</h3><p>When you use <code>vue create</code> to create a new project, some plugins will be pre-installed for you based on your feature selection. In case you want to install a plugin into an already created project, you can do so with the <code>vue add</code> command:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add eslint</span><br></pre></td></tr></table></figure>
+
+<p>(<code>vue add</code> is specifically designed for installing and invoking Vue CLI plugins. It is not meant as a replacement for normal npm packages. For normal npm packages, you should still use your package manager of choice.)</p>
+<h3 id="options-api-vue2-、composition-api-vue3"><a href="#options-api-vue2-、composition-api-vue3" class="headerlink" title="options_api(vue2)、composition_api(vue3)"></a>options_api(vue2)、composition_api(vue3)</h3><p>在 Vue 2 中，通常使用的是 Options API，它是一种基于选项的方式来编写 Vue 组件。Options API 将组件的属性、生命周期钩子、方法等都放在一个对象中，使得组件的结构相对清晰简单。下面是一个使用 Options API 的简单示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;&#123;&#123; message &#125;&#125;&lt;/h1&gt;</span><br><span class="line">    &lt;button @click=&quot;incrementCount&quot;&gt;Click me&lt;/button&gt;</span><br><span class="line">    &lt;p&gt;Count: &#123;&#123; count &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      message: &#x27;Hello, Vue 2!&#x27;,</span><br><span class="line">      count: 0</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    incrementCount() &#123;</span><br><span class="line">      this.count++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在上面的示例中，我们使用 Options API 来定义组件的数据和方法。<code>data</code> 选项用于定义组件的数据属性，<code>methods</code> 选项用于定义组件的方法。这种方式在 Vue 2 中非常常见且易于理解。</p>
+<p>Options API 的优点包括：</p>
+<ul>
+<li>相对简单直观，适合小型项目或初学者</li>
+<li>将相关属性和方法放在同一个对象中，便于查看和修改</li>
+<li>生命周期钩子函数的定义比较清晰</li>
+</ul>
+<p>尽管 Options API 在 Vue 2 中被广泛使用，并且仍然是 Vue 3 中的一部分，但 Vue 3 引入了 Composition API，提供了更灵活、可组合和可重用的方式来编写组件逻辑。</p>
+<p>Composition API 是 Vue 3 中引入的新特性，用于更灵活地组织和重用组件逻辑。它提供了一种新的方式来编写组件代码，使得组件更易于理解、维护和测试。下面是一个简单的示例，演示如何在 Vue 3 中使用 Composition API：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;&#123;&#123; message &#125;&#125;&lt;/h1&gt;</span><br><span class="line">    &lt;button @click=&quot;incrementCount&quot;&gt;Click me&lt;/button&gt;</span><br><span class="line">    &lt;p&gt;Count: &#123;&#123; count &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; ref &#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  setup() &#123;</span><br><span class="line">    // 使用 ref 创建响应式数据</span><br><span class="line">    const message = ref(&#x27;Hello, Vue 3!&#x27;);</span><br><span class="line">    const count = ref(0);</span><br><span class="line"></span><br><span class="line">    // 定义函数来更新数据</span><br><span class="line">    const incrementCount = () =&gt; &#123;</span><br><span class="line">      count.value++;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    // 返回响应式数据和函数</span><br><span class="line">    return &#123;</span><br><span class="line">      message,</span><br><span class="line">      count,</span><br><span class="line">      incrementCount</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，我们使用了 Composition API 中的 <code>ref</code> 函数来创建响应式数据，并在 <code>setup</code> 函数中定义了一个计数器和一个更新计数器的函数。通过 <code>return</code> 返回这些数据和函数，它们可以在模板中被访问和使用。</p>
+<p>Composition API 的优点包括：</p>
+<ul>
+<li>更灵活的组织组件逻辑</li>
+<li>更好的代码重用性</li>
+<li>更容易进行代码拆分和测试</li>
+<li>更清晰地分离关注点</li>
+</ul>
+<p>使用 Composition API 可以帮助您更好地管理和组织 Vue 3 中的组件代码。</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/vue3/vue3-composition-api.html">https://www.runoob.com/vue3/vue3-composition-api.html</a></p>
+<h3 id="element-plus"><a href="#element-plus" class="headerlink" title="element plus"></a>element plus</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 选择一个你喜欢的包管理器</span><br><span class="line"></span><br><span class="line"># NPM</span><br><span class="line">$ npm install element-plus --save</span><br><span class="line"></span><br><span class="line"># Yarn</span><br><span class="line">$ yarn add element-plus</span><br><span class="line"></span><br><span class="line"># pnpm</span><br><span class="line">$ pnpm install element-plus</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="import-ref-from-‘vue’"><a href="#import-ref-from-‘vue’" class="headerlink" title="import { ref } from ‘vue’"></a>import { ref } from ‘vue’</h3><p><code>import &#123; ref &#125; from &#39;vue&#39;</code> 这行代码是在 Vue 3 中使用 Composition API 的一部分。在 Vue 3 中，Composition API 提供了一种新的方式来组织和重用组件逻辑。<code>ref</code> 是 Composition API 中的一个函数，用于创建一个响应式引用（Reactive Reference）。</p>
+<p>当您在 Vue 3 项目中使用 <code>import &#123; ref &#125; from &#39;vue&#39;</code> 时，您可以在组件中使用 <code>ref</code> 函数来创建响应式数据。这样，当数据发生变化时，Vue 3 可以自动更新相关的视图。</p>
+<p>以下是一个简单的示例，演示如何在 Vue 3 组件中使用 <code>ref</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;p&gt;Count: &#123;&#123; count &#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;button @click=&quot;increment&quot;&gt;Increment&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; ref &#125; from &#x27;vue&#x27;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  setup() &#123;</span><br><span class="line">    // 使用 ref 创建一个响应式数据</span><br><span class="line">    const count = ref(0);</span><br><span class="line"></span><br><span class="line">    // 定义一个方法来增加 count 的值</span><br><span class="line">    const increment = () =&gt; &#123;</span><br><span class="line">      count.value++;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">      count,</span><br><span class="line">      increment</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在这个示例中，我们使用 <code>ref</code> 创建了一个名为 <code>count</code> 的响应式数据，并在 <code>increment</code> 方法中对 <code>count</code> 的值进行增加操作。通过这种方式，Vue 3 可以追踪 <code>count</code> 的变化并更新相关的视图。</p>
+<h3 id="dom与虚拟dom"><a href="#dom与虚拟dom" class="headerlink" title="dom与虚拟dom"></a>dom与虚拟dom</h3><p>DOM即文档对象模型，它提供了对整个文档的访问模型，将文档作为一个树形结构，树的每个结点表示一个HTML标签或标签内的文本项。DOM树结构精确地描述了HTML文档中标签间的相互关联性。浏览器在解析HTML文档时，会将文档中的元素、注释、文本等标记按照它们的层级关系转换为DOM树。一个元素要想在页面中显示，则必须在DOM中存在该节点，也就是必须将该元素节点添加到现有DOM树中的某个节点下，才能渲染到页面中。同样地，如果需要删除某个元素，也需要从DOM树中删除该元素对应的节点。如果每次要改变页面展示的内容，只能通过遍历查询DOM树，然后修改DOM树，从而达到更新页面的目的，这个过程相当消耗资源。<br>为了解决这个问题，虚拟DOM概念随着React的诞生而诞生，其由Facebook提出，其卓越的性能很快得到广大开发者的认可。因为每次查询DOM几乎都需要遍历整个DOM树，如果建立一个<u>与DOM树对应的虚拟DOM对象</u>，也就是<u>JavaScript对象</u>，以对象嵌套的方式来表示DOM树及其层级结构，那么每次<u>DOM的修改</u>就变成了对<u>JavaScript对象的属性</u>的操作，由于操作JavaScript对象比操作DOM要快得多，从而可以大幅度减少性能的开支。<br>Vue从2.0开始也在其核心引入了虚拟DOM的概念，Vue.js 3.x重写了虚拟DOM的实现，从而让性能更加优秀。Vue在更新真实的DOM树之前，先比较更新前后虚拟DOM结构中有差异的部分，然后采用异步更新队列的方式将差异部分更新到真实DOM中，从而减少了最终要在真实DOM上执行的操作次数，提高了页面的渲染效率。</p>
+<h3 id="mvc-mvvm"><a href="#mvc-mvvm" class="headerlink" title="mvc, mvvm"></a>mvc, mvvm</h3><p><img src="/rhythm_doc/assets/image-20240503172815080-1722871921047-11.png" alt="image-20240503172815080"></p>
+<p><img src="/rhythm_doc/assets/image-20240503173533535-1722871853177-1-1722871918393-9.png" alt="image-20240503173533535"></p>
+<p><img src="/rhythm_doc/assets/image-20240503181911527-1722871880297-3.png" alt="image-20240503181911527"></p>
+<p>与MVC模式一样，MVVM的主要目的是分离视图（View）和模型（Model），ViewModel层封装了界面展示和操作的属性和接口。通过数据绑定，我们可以将View和ViewModel关联在一起，当ViewModel中的数据发生变化时，View也会同步进行更新，如图所示。</p>
+<p>MVVM模式解耦了视图和模型。在模式中，每一个视图都有对应的一个ViewModel，同时ViewModel与模型建立联系。当接收到用户请求后，ViewModel获取模型响应的数据，并通过数据绑定将相应的视图页面重新渲染。模型层的数据只需要传入ViewModel即可实现视图的同步更新，从而实现了视图和模型之间的松散耦合[2]。<br>与MVC不同的是，MVC是系统架构级别的，而MVVM是用于单页面上的。因此，MVVM的灵活性要远大于MVC。如果将这里的M抛开，只看VVM的话，那这就是一个组件（如treeview）的设计模式。</p>
+<p><img src="/rhythm_doc/assets/image-20240503181402315-1722871885917-5.png" alt="image-20240503181402315"></p>
+<p>在处理用户界面时，DOM操作成本是最高的，目前在渲染流程中采用虚拟DOM以降低页面开销，如图所示。</p>
+<p>在单向数据绑定中，视图模板和动态数据被渲染成网页后，数据流即中止。之后，由ViewModel接手与View层的数据绑定。View层不可以直接修改Model层的数据，如果需要修改Model层的数据，则由ViewModel发起请求，这中间存在ViewModel和Model之间的数据同步传输。然而，在双向数据绑定中，Model和View始终建立着联系，Model层的数据也一直保持着真实的状态，如图&lt;双向数据绑定&gt;所示。</p>
+<p>Vue中最重要的概念就是响应式数据，一方面指衍生数据和元数据之间的响应，通过数据链来实现；另一方面则是指视图与数据之间的绑定。</p>
+<p>Vue实例提供了computed计算属性选项，以供开发者生成衍生数据对象。虽然计算属性以函数形式声明，却并不接受参数，也只能以属性的方式调用。由于计算属性的this指向Vue实例，所以它可以获取实例上所有已挂载的可见属性([2]p107)。</p>
+<p>是否使用computed选项对视图表现并无影响，但使用了computed之后，组件的代码结构明显清晰了许多，而且即使日后数据的处理方式发生了变化，也只需在选项中修改即可。<br>与methods一样，computed不能以箭头函数声明，同时它也会被混入Vue实例，并可通过this调用。<br>由于计算属性依赖于响应式属性，所以当且仅当响应式属性变化时，计算属性才会被重新计算，而且得到的结果将会被缓存，一直到响应式属性再次被修改。相比于使用methods函数求值，这是一种更为高效的机制，如图所示。</p>
+<p><img src="/rhythm_doc/assets/image-20240503183326269-1722871909459-7.png" alt="image-20240503183326269"></p>
+<h3 id="每个组件vue实例的data-vuex"><a href="#每个组件vue实例的data-vuex" class="headerlink" title="每个组件vue实例的data  vuex"></a>每个组件vue实例的data  vuex</h3><h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><p><a target="_blank" rel="noopener" href="https://cli.vuejs.org/guide/plugins-and-presets.html#installing-plugins-in-an-existing-project">1</a></p>
+<p>[1] <em>cli.vuejs.org</em>. <a target="_blank" rel="noopener" href="https://cli.vuejs.org/guide/plugins-and-presets.html#installing-plugins-in-an-existing-project">https://cli.vuejs.org/guide/plugins-and-presets.html#installing-plugins-in-an-existing-project</a></p>
+<p>[2] 刘汉伟, <em>Vue.js从入门到项目实战</em>. 清华大学出版社, 2019.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/08/13/wiki/front%20end/vue/" data-id="clzs1u44w0005lkw0ase9185l" data-title="vue" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-wiki/front end/export default" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/rhythm_doc/2024/08/13/wiki/front%20end/export%20default/" class="article-date">
+  <time class="dt-published" datetime="2024-08-13T06:26:10.358Z" itemprop="datePublished">2024-08-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/rhythm_doc/categories/wiki/">wiki</a>►<a class="article-category-link" href="/rhythm_doc/categories/wiki/front-end/">front end</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/rhythm_doc/2024/08/13/wiki/front%20end/export%20default/">export default</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+
+      <aside class="sidebar_toc" style="
+                                position: fixed;
+                                top: 50%;
+                                right: 0;
+                                transform: translateY(-50%);
+                                width: 300px;
+                                overflow-y: auto;
+                                overflow-x: hidden; /* 隐藏水平滚动 */
+                                max-height: 80%; /* 最大高度为视口的80%，避免内容过多时影响整体布局 */
+">
+    
+    </aside>
+
+      
+        <p>使用export语句只能导出已经命名的变量、函数或类。而使用export default语句的默认导出则可以导出任意表达式，包括匿名函数。</p>
+<p>一个模块只能有一个默认导出，因此export default在一个模块中只能使用一次。</p>
         
           <p class="article-more-link">
-            <a href="/rhythm_doc/2024/08/05/wiki/front%20end/vue/#more">Read More</a>
+            <a href="/rhythm_doc/2024/08/13/wiki/front%20end/export%20default/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/08/05/wiki/front%20end/vue/" data-id="clzh5oznd0007ycw01xgfamae" data-title="vue" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/08/13/wiki/front%20end/export%20default/" data-id="clzs1u44x0006lkw0az5uchnz" data-title="export default" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -192,7 +343,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/08/02/config/spring%20security/" data-id="clzh5oznc0004ycw091u82cn9" data-title="spring security" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/08/02/config/spring%20security/" data-id="clzs1u44w0004lkw0a9rs5omq" data-title="spring security" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -249,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/26/doc/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" data-id="clzh5ozn80001ycw0eatzerme" data-title="项目部署" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/26/doc/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" data-id="clzs1u44s0001lkw06her1twm" data-title="项目部署" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -313,7 +464,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/26/wiki/back%20_end/tomcat_NioEndpoint/" data-id="clzh5oznd0006ycw04pj93jr6" data-title="tomcat_NioEndpoint" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/26/wiki/back%20_end/tomcat_NioEndpoint/" data-id="clzs1u44y0008lkw0aoks2gjr" data-title="tomcat_NioEndpoint" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -374,7 +525,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/26/wiki/front%20end/export_default_%E7%BB%84%E4%BB%B6%E9%80%89%E9%A1%B9/" data-id="clzh5oznc0005ycw0b84o37ao" data-title="export_default_组件选项" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/26/wiki/front%20end/export_default_%E7%BB%84%E4%BB%B6%E9%80%89%E9%A1%B9/" data-id="clzs1u44x0007lkw0436i0zlo" data-title="export_default_组件选项" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -436,7 +587,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/25/doc/%E4%B8%9A%E5%8A%A1%E9%9C%80%E6%B1%82%E4%B8%8E%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91/%E4%B8%9A%E5%8A%A1%E9%9C%80%E6%B1%82_%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0%E5%8F%8C%E5%88%A0%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4/" data-id="clzh5ozn90002ycw0aaeu0s9u" data-title="业务需求_数据更新双删缓存一致" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/25/doc/%E4%B8%9A%E5%8A%A1%E9%9C%80%E6%B1%82%E4%B8%8E%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91/%E4%B8%9A%E5%8A%A1%E9%9C%80%E6%B1%82_%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0%E5%8F%8C%E5%88%A0%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4/" data-id="clzs1u44u0002lkw0f13n0mat" data-title="业务需求_数据更新双删缓存一致" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -498,7 +649,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/17/doc/%E4%B8%9A%E5%8A%A1%E9%9C%80%E6%B1%82%E4%B8%8E%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91/%E4%B8%9A%E5%8A%A1%E9%9C%80%E6%B1%82_%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/" data-id="clzh5oznb0003ycw0cf5odvrt" data-title="业务需求_数据缓存" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/06/17/doc/%E4%B8%9A%E5%8A%A1%E9%9C%80%E6%B1%82%E4%B8%8E%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91/%E4%B8%9A%E5%8A%A1%E9%9C%80%E6%B1%82_%E6%95%B0%E6%8D%AE%E7%BC%93%E5%AD%98/" data-id="clzs1u44u0003lkw00mhdfeef" data-title="业务需求_数据缓存" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -563,7 +714,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/05/26/hello-world/" data-id="clzh5ozn20000ycw0dwqe7pm4" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://testingforforrwhat.github.io/rhythm_doc/2024/05/26/hello-world/" data-id="clzs1u44m0000lkw0dr9l6n5r" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -613,7 +764,11 @@
       <ul>
         
           <li>
-            <a href="/rhythm_doc/2024/08/05/wiki/front%20end/vue/">vue</a>
+            <a href="/rhythm_doc/2024/08/13/wiki/front%20end/vue/">vue</a>
+          </li>
+        
+          <li>
+            <a href="/rhythm_doc/2024/08/13/wiki/front%20end/export%20default/">export default</a>
           </li>
         
           <li>
@@ -626,10 +781,6 @@
         
           <li>
             <a href="/rhythm_doc/2024/06/26/wiki/back%20_end/tomcat_NioEndpoint/">tomcat_NioEndpoint</a>
-          </li>
-        
-          <li>
-            <a href="/rhythm_doc/2024/06/26/wiki/front%20end/export_default_%E7%BB%84%E4%BB%B6%E9%80%89%E9%A1%B9/">export_default_组件选项</a>
           </li>
         
       </ul>
