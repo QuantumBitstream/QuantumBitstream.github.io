@@ -576,7 +576,6 @@ a.article-title:hover {
 .article-entry ul,
 .article-entry ol,
 .article-entry dl {
-  list-style-type: none;
   margin-top: 1.6em;
   margin-bottom: 1.6em;
 }
